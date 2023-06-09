@@ -16,6 +16,7 @@ const AddContact: React.FC = () => {
     if (contactForm.firstName && contactForm.lastName && contactForm.address) {
       await addPerson(contactForm);
       setPersonForm({});
+      window.location.reload();
     }
   };
 
