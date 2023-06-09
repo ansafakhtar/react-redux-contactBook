@@ -5,12 +5,14 @@ import ContactsList from "./components/ContactsList";
 import AddContact from "./components/AddContact";
 
 function App() {
-
   return (
     <>
-      <nav>
+      <nav className="sidenav">
         <Link to="/">
-          <h2>Menu</h2>
+          <div className="sidenav-main">
+            <i className="material-icons">contacts</i>
+            <h2>Contacts</h2>
+          </div>
         </Link>
         <ul>
           <li>
@@ -21,7 +23,7 @@ function App() {
           </li>
         </ul>
       </nav>
-      <main>
+      <main className="main">
         <Routes>
           {/* <Route path='/' element={<ContactsList contacts={contacts} isLoading={true} />} /> */}
           <Route path="/" element={<>Menu Page</>} />
