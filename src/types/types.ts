@@ -3,6 +3,7 @@ export interface Contact {
   firstName: string;
   lastName: string;
   address: string;
+  city: string;
   email: string;
   linkedIn?: string;
   twitter?: string;

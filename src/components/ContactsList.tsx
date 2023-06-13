@@ -1,4 +1,5 @@
 import React from "react";
+import "./ContactList.css";
 import {
   useGetContactsQuery,
   useDeleteContactMutation,
@@ -24,13 +25,18 @@ const ContactsList: React.FC = () => {
 
   return (
     <div>
-      <h2>Address Book</h2>
+      <h2 className="top-bar">Address Book</h2>
 
-      <ul>
+      <ul className="contact-list">
         {contacts.map((contact) => (
-          <li key={contact.id}>
-            {contact.firstName} {contact.lastName} - {contact.address}
-            <button onClick={() => handleDelete(contact.id)}>Delete</button>
+          <li key={contact.id} className="contact">
+            <h1 className="contact-name">{contact.firstName} {contact.lastName}</h1>
+            <p className="contact-address"> <b>Address:</b> {contact.address}</p>
+            <p className="contact-city"> <b>City:</b> {contact.city}</p>
+            <button className="btn">View</button>
+            <button className="btn-secondary" onClick={() => handleDelete(contact.id)}>
+              Delete
+            </button>
           </li>
         ))}
       </ul>
