@@ -40,17 +40,6 @@ const AddContact: React.FC = () => {
             <span className="focus-border"></span>
           </div>
 
-          {/* <label htmlFor="firstName">First Name: </label> */}
-          {/* <input
-              id="firstName"
-              name="firstName"
-              type="text"
-              value={contactForm.firstName || ""}
-              onChange={handleInputChange}
-              required
-            /> */}
-
-          {/* <label htmlFor="lastName">Last Name:</label> */}
           <div className="col-3">
             <input
               className="effect"
@@ -64,16 +53,6 @@ const AddContact: React.FC = () => {
             />
             <span className="focus-border"></span>
           </div>
-
-          {/* <label htmlFor="address">Address:</label> */}
-          {/* <input
-            id="address"
-            name="address"
-            type="text"
-            value={contactForm.address || ""}
-            onChange={handleInputChange}
-            required
-          /> */}
 
           <div className="col-3">
             <input
@@ -103,16 +82,6 @@ const AddContact: React.FC = () => {
             <span className="focus-border"></span>
           </div>
 
-          {/* <label htmlFor="email">E-mail:</label> */}
-          {/* <input
-            id="email"
-            name="email"
-            type="email"
-            value={contactForm.email || ""}
-            onChange={handleInputChange}
-            required
-          /> */}
-
           <div className="col-3">
             <input
               className="effect"
@@ -127,20 +96,11 @@ const AddContact: React.FC = () => {
             <span className="focus-border"></span>
           </div>
 
-          {/* <label htmlFor="linkdin">LinkdIn:</label> */}
-          {/* <input
-            id="linkdin"
-            name="linkdin"
-            type="text"
-            value={contactForm.linkedIn || ""}
-            onChange={handleInputChange}
-          /> */}
-
           <div className="col-3">
             <input
               className="effect"
-              id="linkdin"
-              name="linkdin"
+              id="linkedIn"
+              name="linkedIn"
               type="text"
               value={contactForm.linkedIn || ""}
               onChange={handleInputChange}
@@ -148,15 +108,6 @@ const AddContact: React.FC = () => {
             />
             <span className="focus-border"></span>
           </div>
-
-          {/* <label htmlFor="twitter">Twitter:</label> */}
-          {/* <input
-            id="twitter"
-            name="twitter"
-            type="text"
-            value={contactForm.twitter || ""}
-            onChange={handleInputChange}
-          /> */}
 
           <div className="col-3">
             <input

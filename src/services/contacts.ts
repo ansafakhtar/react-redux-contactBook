@@ -16,6 +16,12 @@ export const contactBookApi = createApi({
       //       ]
       //     : [{ type: 'Contact', id: 'LIST' }],
     }),
+    getContact: builder.query<Contact, string>({
+      query: (id) => ({
+        url: `contacts/${id}`,
+        method: "GET",
+      })
+    }),
     addContact: builder.mutation<Contact, Partial<Contact>>({
       query: (contact) => ({
         url: "contacts",
@@ -29,11 +35,20 @@ export const contactBookApi = createApi({
         method: "DELETE",
       }),
     }),
+    updateContact: builder.mutation<Contact, Partial<Contact>>({
+      query: (contact) => ({
+        url: `contacts/${contact.id}`,
+        method: "PUT",
+        body: contact,
+      }),
+    }),     
   }),
 });
 
 export const {
   useGetContactsQuery,
+  useGetContactQuery,
   useAddContactMutation,
   useDeleteContactMutation,
+  useUpdateContactMutation,
 } = contactBookApi;

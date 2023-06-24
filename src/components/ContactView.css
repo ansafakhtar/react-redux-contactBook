@@ -5,7 +5,8 @@
 }
 
 .contact-form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 :focus {
@@ -24,12 +25,13 @@ input[type="text"] {
     outline: none;
 }
 
-.col-3 {
+.col {
     float: left;
     width: 27.33%;
     margin: 20px 4%;
     position: relative;
     display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 input[type="text"] {
@@ -64,4 +66,15 @@ input[type="text"] {
 
 .add-btn {
     margin: 30px 4%;
+}
+
+
+.add-btn:disabled {
+    cursor: not-allowed;
+}
+
+.field-tag {
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
