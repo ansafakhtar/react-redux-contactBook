@@ -8,13 +8,12 @@ export const contactBookApi = createApi({
   endpoints: (builder) => ({
     getContacts: builder.query<Contact[], void>({
       query: () => "contacts",
-      // providesTags: (result) =>
-      //  result
-      //     ? [
-      //         ...result.map(({ firstName }) => ({ type: 'Contact' as const, firstName })),
-      //         { type: 'Contact', id: 'LIST' },
-      //       ]
-      //     : [{ type: 'Contact', id: 'LIST' }],
+    }),
+    getContact: builder.query<Contact, string>({
+      query: (id) => ({
+        url: `contacts/${id}`,
+        method: "GET",
+      })
     }),
     addContact: builder.mutation<Contact, Partial<Contact>>({
       query: (contact) => ({
@@ -29,11 +28,20 @@ export const contactBookApi = createApi({
         method: "DELETE",
       }),
     }),
+    updateContact: builder.mutation<Contact, Partial<Contact>>({
+      query: (contact) => ({
+        url: `contacts/${contact.id}`,
+        method: "PUT",
+        body: contact,
+      }),
+    }),     
   }),
 });
 
 export const {
   useGetContactsQuery,
+  useGetContactQuery,
   useAddContactMutation,
   useDeleteContactMutation,
+  useUpdateContactMutation,
 } = contactBookApi;

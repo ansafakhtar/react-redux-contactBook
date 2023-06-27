@@ -1,6 +1,7 @@
 import { Contact } from "../types/types";
 import React, { useState } from "react";
 import { useAddContactMutation } from "../services/contacts";
+import "./AddContact.css";
 
 const AddContact: React.FC = () => {
   const [contactForm, setPersonForm] = useState<Partial<Contact>>({});
@@ -22,73 +23,110 @@ const AddContact: React.FC = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <h2>Create Contact</h2>
+      <h2 className="top-bar">Add Contact</h2>
+      <div className="container">
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="col-3">
+            <input
+              className="effect"
+              id="firstName"
+              name="firstName"
+              type="text"
+              value={contactForm.firstName || ""}
+              onChange={handleInputChange}
+              required
+              placeholder="First Name"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <label htmlFor="firstName">First Name</label>
-        <input
-          id="firstName"
-          name="firstName"
-          type="text"
-          value={contactForm.firstName || ""}
-          onChange={handleInputChange}
-          required
-        />
+          <div className="col-3">
+            <input
+              className="effect"
+              id="lastName"
+              name="lastName"
+              type="text"
+              value={contactForm.lastName || ""}
+              onChange={handleInputChange}
+              required
+              placeholder="Last Name"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <label htmlFor="lastName">Last Name:</label>
-        <input
-          id="lastName"
-          name="lastName"
-          type="text"
-          value={contactForm.lastName || ""}
-          onChange={handleInputChange}
-          required
-        />
+          <div className="col-3">
+            <input
+              className="effect"
+              id="address"
+              name="address"
+              type="text"
+              value={contactForm.address || ""}
+              onChange={handleInputChange}
+              required
+              placeholder="Address"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <label htmlFor="address">Address:</label>
-        <input
-          id="address"
-          name="address"
-          type="text"
-          value={contactForm.address || ""}
-          onChange={handleInputChange}
-          required
-        />
+          <div className="col-3">
+            <input
+              className="effect"
+              id="city"
+              name="city"
+              type="text"
+              value={contactForm.city || ""}
+              onChange={handleInputChange}
+              required
+              placeholder="City"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <label htmlFor="email">E-mail:</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          value={contactForm.email || ""}
-          onChange={handleInputChange}
-          required
-        />
+          <div className="col-3">
+            <input
+              className="effect"
+              id="email"
+              name="email"
+              type="email"
+              value={contactForm.email || ""}
+              onChange={handleInputChange}
+              required
+              placeholder="Email"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <label htmlFor="linkdin">LinkdIn:</label>
-        <input
-          id="linkdin"
-          name="linkdin"
-          type="text"
-          value={contactForm.linkedIn || ""}
-          onChange={handleInputChange}
-        />
+          <div className="col-3">
+            <input
+              className="effect"
+              id="linkedIn"
+              name="linkedIn"
+              type="text"
+              value={contactForm.linkedIn || ""}
+              onChange={handleInputChange}
+              placeholder="LinkedIn"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <label htmlFor="twitter">Twitter:</label>
-        <input
-          id="twitter"
-          name="twitter"
-          type="text"
-          value={contactForm.twitter || ""}
-          onChange={handleInputChange}
-        />
+          <div className="col-3">
+            <input
+              className="effect"
+              id="twitter"
+              name="twitter"
+              type="text"
+              value={contactForm.twitter || ""}
+              onChange={handleInputChange}
+              placeholder="Twitter"
+            />
+            <span className="focus-border"></span>
+          </div>
 
-        <div className="actions-section">
-          <button className="button blue" type="submit">
-            Create
+          <button className="btn add-btn" type="submit">
+            Add Contact
           </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </>
   );
 };

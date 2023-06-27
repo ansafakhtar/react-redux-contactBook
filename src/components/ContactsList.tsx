@@ -1,8 +1,10 @@
 import React from "react";
+import "./ContactList.css";
 import {
   useGetContactsQuery,
   useDeleteContactMutation,
 } from "../services/contacts";
+import { Link } from "react-router-dom";
 
 const ContactsList: React.FC = () => {
   const { data: contacts = [], isError, isLoading } = useGetContactsQuery();
@@ -24,13 +26,33 @@ const ContactsList: React.FC = () => {
 
   return (
     <div>
-      <h2>Address Book</h2>
+      <h2 className="top-bar">Address Book</h2>
 
-      <ul>
+      <ul className="contact-list">
         {contacts.map((contact) => (
-          <li key={contact.id}>
-            {contact.firstName} {contact.lastName} - {contact.address}
-            <button onClick={() => handleDelete(contact.id)}>Delete</button>
+          <li key={contact.id} className="contact">
+            <div className="avatar">
+              {contact.firstName.charAt(0).toUpperCase()}
+            </div>
+            <h1 className="contact-name">
+              {contact.firstName} {contact.lastName}
+            </h1>
+            <p className="contact-address">
+              <b>Address:</b> {contact.address}
+            </p>
+            <p className="contact-city">
+              <b>City:</b> {contact.city}
+            </p>
+
+            <Link to={`/contacts/${contact.id}`}>
+              <button className="btn">View</button>
+            </Link>
+            <button
+              className="btn-secondary"
+              onClick={() => handleDelete(contact.id)}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
