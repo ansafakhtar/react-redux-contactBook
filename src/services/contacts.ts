@@ -8,13 +8,6 @@ export const contactBookApi = createApi({
   endpoints: (builder) => ({
     getContacts: builder.query<Contact[], void>({
       query: () => "contacts",
-      // providesTags: (result) =>
-      //  result
-      //     ? [
-      //         ...result.map(({ firstName }) => ({ type: 'Contact' as const, firstName })),
-      //         { type: 'Contact', id: 'LIST' },
-      //       ]
-      //     : [{ type: 'Contact', id: 'LIST' }],
     }),
     getContact: builder.query<Contact, string>({
       query: (id) => ({

@@ -1,41 +1,66 @@
 {
   "contacts": [
     {
-      "id": 1,
       "firstName": "John",
       "lastName": "Carmack",
-      "street": "10 Keen Street",
-      "city": "London"
+      "address": "10 Keen Street",
+      "city": "London",
+      "email": "JohnCarmack@test.com",
+      "linkedIn": "JohnCarmack LinkedIn",
+      "twitter": "John_Carmack Twitter",
+      "id": 1
     },
     {
       "id": 2,
       "firstName": "Grace",
       "lastName": "Hopper",
-      "street": "32 Deebug Road",
-      "city": "London"
+      "address": "32 Deebug Road",
+      "city": "London",
+      "email": "Grace@test.com"
     },
     {
       "firstName": "Dimitris",
       "lastName": "Tsimaras",
-      "street": "Nowhere",
+      "address": "Nowhere",
       "city": "Arta",
-      "id": 4
+      "id": 4,
+      "email": "dimitris@test.com"
     },
     {
-      "firstName": "Aaron",
-      "lastName": "ffx",
-      "street": "aa",
-      "city": "aa",
-      "id": 5,
-      "email": "aa@gmail.com",
-      "linkdin": "gg"
+      "firstName": "Test",
+      "lastName": "User",
+      "address": "Test Address",
+      "city": "Mumbai",
+      "email": "yogeti3078@fitzola.com",
+      "id": 5
     },
     {
-      "firstName": "asd",
-      "lastName": "sfs",
-      "address": "qq12",
-      "email": "asdf@gmail.com",
+      "firstName": "Saif",
+      "lastName": "Khan",
+      "address": "A-123 xyz road",
+      "email": "yogeti3078@fitzola.com",
+      "city": "Delhi",
       "id": 6
+    },
+    {
+      "firstName": "Test",
+      "lastName": "User",
+      "address": "Test Address",
+      "city": "Test City",
+      "email": "User@test.com",
+      "linkdin": "Test linkedIn",
+      "twitter": "Test Twitter",
+      "id": 7
+    },
+    {
+      "firstName": "Rahul",
+      "lastName": "Singh",
+      "address": "Test Address",
+      "city": "Delhi",
+      "email": "test@user.com",
+      "linkedIn": "Rahul-Singh",
+      "twitter": "rahul_singh",
+      "id": 8
     }
   ]
 }

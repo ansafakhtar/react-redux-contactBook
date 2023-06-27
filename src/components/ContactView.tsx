@@ -15,10 +15,6 @@ const ContactView: React.FC = () => {
   const [contactForm, setPersonForm] = useState<Partial<Contact>>({});
   const [editContact] = useUpdateContactMutation();
 
-  // console.log(contactForm);
-  // console.log({id});
-  // const returnedTarget = Object.assign(contactForm, {id});
-  // console.log(returnedTarget);
   const handleFieldDisable = () => {
     setFieldDisabled(!fieldDisabled);
   };
@@ -38,7 +34,6 @@ const ContactView: React.FC = () => {
       contactForm.email
     ) {
       await editContact(Object.assign(contactForm, { id }));
-      // console.log(contactForm)
       setPersonForm({});
       window.location.reload();
     } else {

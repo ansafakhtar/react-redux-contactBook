@@ -31,7 +31,9 @@ const ContactsList: React.FC = () => {
       <ul className="contact-list">
         {contacts.map((contact) => (
           <li key={contact.id} className="contact">
-            <div className="avatar">{contact.firstName.charAt(0).toUpperCase()}</div>
+            <div className="avatar">
+              {contact.firstName.charAt(0).toUpperCase()}
+            </div>
             <h1 className="contact-name">
               {contact.firstName} {contact.lastName}
             </h1>
@@ -41,10 +43,10 @@ const ContactsList: React.FC = () => {
             <p className="contact-city">
               <b>City:</b> {contact.city}
             </p>
-            
-              <Link to={`/contacts/${contact.id}`}>
+
+            <Link to={`/contacts/${contact.id}`}>
               <button className="btn">View</button>
-              </Link>
+            </Link>
             <button
               className="btn-secondary"
               onClick={() => handleDelete(contact.id)}

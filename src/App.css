@@ -1,46 +1,10 @@
-.sidenav {
-  height: 100%;
-  width: 260px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #8294C4;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.main {
-  margin-left: 260px;
-}
-
-.sidenav-main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0px 0px 30px 20px;
-}
-
-.material-icons {
-  font-size: 40px;
-  padding-right: 10px;
-}
-
-.sidenav li {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 1rem;
-  color: #818181;
-  display: block;
-}
-
 .btn {
   font-size: 1rem;
   font-weight: 600;
   align-items: center;
   vertical-align: middle;
   justify-content: center;
-  background-color: #ACB1D6;
+  background-color: #a8a8e0;
   color: #ffffff;
   border-radius: 20px;
   border: none;
@@ -51,15 +15,14 @@
   cursor: pointer;
   line-height: 20px;
   max-width: 170px;
-  min-width: 100px;
+  min-width: 90px;
 }
 
 .btn:hover,
 .btn:focus {
-  background-color: #8294C4;
+  background-color: #61528f;
   color: #ffffff;
 }
-
 
 .btn-secondary {
   font-size: 1rem;
@@ -78,11 +41,18 @@
   cursor: pointer;
   line-height: 20px;
   max-width: 170px;
-  min-width: 100px;
+  min-width: 90px;
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
   background-color: #FFEAD2;
   color: #ffffff;
+}
+
+.top-bar {
+  display: flex;
+  padding: 30px 0px 30px 65px;
+  border-bottom: 2px solid #2f2758;
+  color: #2f2758;
 }

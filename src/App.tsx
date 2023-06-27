@@ -1,30 +1,15 @@
-// import { useState } from 'react'
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import ContactsList from "./components/ContactsList";
 import AddContact from "./components/AddContact";
 import ContactView from "./components/ContactView";
-import Welcome from "../public/Welcome.svg";
+import Welcome from "./assets/Welcome.svg";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
-      <nav className="sidenav">
-        <Link to="/">
-          <div className="sidenav-main">
-            <i className="material-icons">contacts</i>
-            <h2>Contacts</h2>
-          </div>
-        </Link>
-        <ul>
-          <li>
-            <Link to="/contacts/">Contacts List</Link>
-          </li>
-          <li>
-            <Link to="/contacts/add">Add New Contact</Link>
-          </li>
-        </ul>
-      </nav>
+      <NavBar />
       <main className="main">
         <Routes>
           <Route
